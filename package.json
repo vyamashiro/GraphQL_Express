@@ -1,0 +1,20 @@
+{
+  "name": "GraphQL_Express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vyamashiro/GraphQL_Express.git",
+  "author": "vyamashiro",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
