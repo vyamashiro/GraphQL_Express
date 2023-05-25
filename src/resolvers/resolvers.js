@@ -4,21 +4,7 @@ dotenv.config()
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.API_SECRET_STRIPE);
 
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-];
-
 export const resolvers = {
-  Query: {
-    books: () => books,
-  },
   Mutation: {
     async createPaymentOrder(_, { input }) {
       const { userId, userCompanyName } = input;

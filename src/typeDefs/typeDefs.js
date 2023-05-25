@@ -1,13 +1,4 @@
 export const typeDefs = `
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-
   type URLPayment {
     url: String
   }

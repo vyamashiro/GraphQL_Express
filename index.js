@@ -13,8 +13,7 @@ import express from 'express';
 import http from 'http';
 import bodyParser from 'body-parser';
 
-// const endpointSecret = process.env.ENDPOINT_SECRET;
-const endpointSecret = 'whsec_3d268eef4d9d4b77a5687bf64363fda509327bfbab92b5c0b5eb45809b6e11db';
+const endpointSecret = process.env.ENDPOINT_SECRET;
 
 import { resolvers } from "./src/resolvers/resolvers.js";
 import { typeDefs } from "./src/typeDefs/typeDefs.js";
@@ -121,7 +120,7 @@ app.post(
           // return res.status(400).send(`Webhook Error: ${err.message}`);
         }
       }
-  
+
       // console.log('type', event.type); 
       // console.log('data', event.data); 
       // console.log('metadata', event.data.object.metadata);
@@ -149,14 +148,9 @@ app.post(
           // Unexpected event type
           console.log(`Unhandled event type ${event.type}.`);
       }
-    
-      // Return a 200 res to acknowledge receipt of the event
-      
+
       console.log('Operação concluída !!!!');
 
-      // res.json({received: true});
-      // res.json({received: true});
-      // return res.send();
     },
   }),
 );
